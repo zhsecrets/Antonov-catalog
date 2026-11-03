@@ -104,5 +104,19 @@ window.WORKS = [
   { n: 60, title: "«Стога»", tech: "Бумага, акварель", size: "39 × 71,5", year: "", genre: ["peyzazh"], place: [], season: ["leto"], status: "studio", w: 720, h: 480 },
   { n: 61, title: "«В ночь с 1 на 2 января 1976–1977 г.»", tech: "Оргалит, темпера", size: "76 × 110", year: "", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 720, h: 540 },
   { n: 62, title: "«Ночь»", tech: "Оргалит, темпера", size: "121 × 61", year: "", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 360, h: 720 },
-  { n: 63, title: "Эскиз. «Двое»", tech: "Оргалит, темпера", size: "", year: "", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 720, h: 540 }
+  { n: 63, title: "Эскиз. «Двое»", tech: "Оргалит, темпера", size: "", year: "", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 720, h: 540 },
+  { n: 64, title: "Эскиз. «Прощение»", tech: "Оргалит, темпера", size: "70 × 129", year: "", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 720, h: 360 },
+  { n: 65, title: "«Утро. Семья. Соколиная гора»", tech: "Холст, масло", size: "118,5 × 82,5", year: "60-е гг.", genre: ["portret-semya", "kompoziciya"], place: [], season: [], status: "studio", w: 540, h: 720 },
+  { n: 66, title: "«Храм Св. Георгия на Старой Ладоге»", tech: "Холст, масло", size: "100 × 138", year: "1976–1992 гг.", genre: ["peyzazh"], place: ["ladoga", "hramy"], season: ["zima"], status: "studio", w: 720, h: 480 },
+  { n: 67, title: "«Натюрморт с золотыми шарами, гладиолусом и яблоками»", tech: "Картон, масло", size: "98 × 78", year: "1996", genre: ["natyurmort"], place: [], season: ["leto"], status: "studio", w: 540, h: 720 },
+  { n: 68, title: "«Ожидание»", tech: "Холст, масло", size: "60 × 140", year: "", genre: ["kompoziciya"], place: [], season: ["zima"], status: "studio", w: 720, h: 345 },
+  { n: 69, title: "«Песня. Пугачев»", tech: "Холст, масло", size: "91 × 130", year: "70-е гг.", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 720, h: 507 },
+  { n: 70, title: "Эскиз. «Работницы хлебопек. цеха»", tech: "", size: "87 × 124", year: "70-е гг.", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 720, h: 504 },
+  { n: 71, title: "«Утро. Семья. Соколиная гора»", tech: "Холст, масло", size: "150 × 100", year: "", genre: ["portret-semya", "kompoziciya"], place: [], season: [], status: "studio", w: 541, h: 720 },
+  { n: 72, title: "«Работница хлебопекарного цеха»", tech: "Холст, масло", size: "59,2 × 80", year: "1957", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 720, h: 540 },
+  { n: 73, title: "«У бабушки в гостях»", tech: "Холст, масло", size: "53 × 71", year: "1974", genre: ["portret-semya"], place: [], season: [], status: "studio", w: 720, h: 540 },
+  { n: 74, title: "«Сад»", tech: "Холст, масло", size: "69 × 51", year: "ок. 1958", genre: ["peyzazh"], place: [], season: ["leto"], status: "studio", w: 720, h: 540 },
+  { n: 75, title: "«Клязьма»", tech: "Холст, масло", size: "70 × 50", year: "1958", genre: ["peyzazh"], place: [], season: ["zima"], status: "studio", w: 720, h: 540 },
+  { n: 76, title: "«Строительство моста во Владимире»", tech: "", size: "74 × 50", year: "1961", genre: ["kompoziciya"], place: ["hramy"], season: [], status: "studio", w: 720, h: 540 },
+  { n: 77, title: "«На реке»", tech: "", size: "60,8 × 50,5", year: "1962", genre: ["kompoziciya"], place: [], season: ["leto"], status: "studio", w: 720, h: 602 }
 ];
