@@ -108,7 +108,7 @@ window.WORKS = [
   { n: 64, title: "Эскиз. «Прощение»", tech: "Оргалит, темпера", size: "70 × 129", year: "", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 720, h: 360 },
   { n: 65, title: "«Утро. Семья. Соколиная гора»", tech: "Холст, масло", size: "118,5 × 82,5", year: "60-е гг.", genre: ["portret-semya", "kompoziciya"], place: [], season: [], status: "studio", w: 540, h: 720 },
   { n: 66, title: "«Храм Св. Георгия на Старой Ладоге»", tech: "Холст, масло", size: "100 × 138", year: "1976–1992 гг.", genre: ["peyzazh"], place: ["ladoga", "hramy"], season: ["zima"], status: "studio", w: 720, h: 480 },
-  { n: 67, title: "«Натюрморт с золотыми шарами, гладиолусом и яблоками»", tech: "Картон, масло", size: "98 × 78", year: "1996", genre: ["natyurmort"], place: [], season: ["leto"], status: "studio", w: 540, h: 720 },
+  { n: 67, title: "«Натюрморт с золотыми шарами, гладиолусом и яблоками»", tech: "Картон, масло", size: "98 × 78", year: "1984", genre: ["natyurmort"], place: [], season: ["leto"], status: "studio", w: 540, h: 720 },
   { n: 68, title: "«Ожидание»", tech: "Холст, масло", size: "60 × 140", year: "", genre: ["kompoziciya"], place: [], season: ["zima"], status: "studio", w: 720, h: 345 },
   { n: 69, title: "«Песня. Пугачев»", tech: "Холст, масло", size: "91 × 130", year: "70-е гг.", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 720, h: 507 },
   { n: 70, title: "Эскиз. «Работницы хлебопек. цеха»", tech: "", size: "87 × 124", year: "70-е гг.", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 720, h: 504 },
@@ -118,5 +118,15 @@ window.WORKS = [
   { n: 74, title: "«Сад»", tech: "Холст, масло", size: "69 × 51", year: "ок. 1958", genre: ["peyzazh"], place: [], season: ["leto"], status: "studio", w: 720, h: 540 },
   { n: 75, title: "«Клязьма»", tech: "Холст, масло", size: "70 × 50", year: "1958", genre: ["peyzazh"], place: [], season: ["zima"], status: "studio", w: 720, h: 540 },
   { n: 76, title: "«Строительство моста во Владимире»", tech: "", size: "74 × 50", year: "1961", genre: ["kompoziciya"], place: ["hramy"], season: [], status: "studio", w: 720, h: 540 },
-  { n: 77, title: "«На реке»", tech: "", size: "60,8 × 50,5", year: "1962", genre: ["kompoziciya"], place: [], season: ["leto"], status: "studio", w: 720, h: 602 }
+  { n: 77, title: "«На реке»", tech: "", size: "60,8 × 50,5", year: "1962", genre: ["kompoziciya"], place: [], season: ["leto"], status: "studio", w: 720, h: 602 },
+  { n: 78, title: "«Семья на отдыхе»", tech: "Холст, масло", size: "44 × 52", year: "1965", genre: ["portret-semya"], place: [], season: ["leto"], status: "studio", w: 720, h: 540 },
+  { n: 79, title: "«На току»", tech: "Холст, масло", size: "40 × 60", year: "60-е гг.", genre: ["kompoziciya"], place: [], season: ["leto"], status: "studio", w: 720, h: 540 },
+  { n: 80, title: "«Надвратная церковь Борисо-Глебск.»", tech: "Холст, масло", size: "40 × 60", year: "", genre: ["peyzazh"], place: ["hramy"], season: [], status: "studio", w: 720, h: 540 },
+  { n: 81, title: "«Переславль, окраина»", tech: "Холст, масло", size: "33 × 57,5", year: "60-е гг.", genre: ["peyzazh"], place: ["pereslavl"], season: ["zima"], status: "studio", w: 720, h: 540 },
+  { n: 82, title: "«Банька в санатории»", tech: "Холст, масло", size: "37 × 28", year: "1958", genre: ["peyzazh"], place: [], season: ["zima"], status: "studio", w: 540, h: 720 },
+  { n: 83, title: "«Барский пруд»", tech: "Холст, масло", size: "44 × 58", year: "1981", genre: ["peyzazh"], place: ["titovo"], season: ["leto"], status: "studio", w: 720, h: 540 },
+  { n: 84, title: "«Золотой сад»", tech: "Картон, масло", size: "69,5 × 50,5", year: "1996", genre: ["peyzazh"], place: [], season: ["osen"], status: "studio", w: 540, h: 720 },
+  { n: 85, title: "«Портрет незнакомки»", tech: "Холст, масло", size: "50 × 39,5", year: "1959", genre: ["portret"], place: [], season: [], status: "studio", w: 540, h: 720 },
+  { n: 86, title: "«На Ладоге»", tech: "Картон, масло", size: "43,5 × 77", year: "1976", genre: ["peyzazh"], place: ["ladoga"], season: [], status: "studio", w: 720, h: 540 },
+  { n: 87, title: "«Крыльцо в мастерской»", tech: "", size: "51 × 60", year: "1987", genre: ["peyzazh"], place: [], season: ["leto"], status: "studio", w: 720, h: 540 }
 ];
