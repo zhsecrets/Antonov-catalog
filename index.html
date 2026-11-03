@@ -2,59 +2,74 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Евгений Иванович Антонов (1930–1998). Каталог работ</title>
-<meta name="description" content="Онлайн-каталог работ художника Евгения Ивановича Антонова (1930–1998): пейзажи, натюрморты, портреты.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Евгений Антонов (1930–1998). Каталог работ</title>
+<meta name="description" content="Онлайн-каталог работ художника Евгения Ивановича Антонова (1930–1998): пейзажи, натюрморты, портреты, композиции.">
 <meta property="og:title" content="Евгений Иванович Антонов (1930–1998)">
 <meta property="og:description" content="Онлайн-каталог работ художника">
-<meta property="og:image" content="img/full/09.jpg">
+<meta property="og:image" content="img/full/23.jpg">
+<meta name="theme-color" content="#1c2233">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Spectral:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="masthead">
-  <p class="eyebrow">Каталог работ</p>
-  <h1><span class="surname">Антонов</span><span class="given">Евгений Иванович</span></h1>
-  <p class="years">1930 – 1998</p>
-  <nav class="links">
+<header class="hero">
+  <img class="hero-img" src="img/full/23.jpg" alt="Евгений Антонов. «Даль небесная», 1973">
+  <nav class="topnav" aria-label="Разделы">
+    <a href="#works">Работы</a>
     <a href="about.html">О художнике</a>
-    <a href="catalog/antonov-katalog.pdf" download>Скачать каталог (PDF)</a>
+    <a href="catalog/antonov-katalog.pdf" download>Каталог в PDF</a>
   </nav>
+  <div class="hero-text">
+    <h1>Евгений<br>Антонов</h1>
+    <p class="hero-sub">1930–1998. Живопись, акварель, графика</p>
+  </div>
+  <p class="hero-credit">«Даль небесная», 1973</p>
 </header>
 
-<section class="filters" aria-label="Фильтры">
-  <div id="filter-groups"></div>
-  <div class="filter-foot">
-    <span id="count" aria-live="polite"></span>
-    <button id="reset" type="button" hidden>Сбросить фильтры</button>
-  </div>
+<section class="quote" aria-label="Цитата">
+  <blockquote>
+    <p>«Если б мог, то мечтал бы разрисовать небо»</p>
+    <footer>Евгений Антонов</footer>
+  </blockquote>
 </section>
 
-<main>
+<main id="works" class="works">
+  <div class="works-head">
+    <h2>Работы</h2>
+    <p id="count" aria-live="polite"></p>
+  </div>
+
+  <section class="filters" aria-label="Фильтры">
+    <div id="filter-groups"></div>
+    <button id="reset" class="reset" type="button" hidden>Сбросить фильтры</button>
+  </section>
+
   <ul id="grid" class="grid"></ul>
-  <p id="empty" class="empty" hidden>Под эти фильтры работ нет. <button type="button" class="linklike" id="reset2">Сбросить</button></p>
+  <p id="empty" class="empty" hidden>Под эти фильтры работ нет. <button type="button" class="reset" id="reset2">Сбросить фильтры</button></p>
 </main>
 
-<footer class="foot">
-  <p>Евгений Иванович Антонов · 1930–1998</p>
+<footer class="site-foot">
+  <p>Евгений Иванович Антонов, 1930–1998</p>
+  <p><a href="about.html">О художнике</a><a href="catalog/antonov-katalog.pdf" download>Каталог в PDF</a></p>
 </footer>
 
 <div id="viewer" class="viewer" hidden role="dialog" aria-modal="true" aria-labelledby="v-title">
-  <button class="v-close" type="button" aria-label="Закрыть">×</button>
-  <button class="v-nav v-prev" type="button" aria-label="Предыдущая работа">‹</button>
-  <button class="v-nav v-next" type="button" aria-label="Следующая работа">›</button>
-  <figure class="v-fig">
-    <div class="v-img-wrap"><img id="v-img" alt=""></div>
-    <figcaption>
-      <span class="v-num" id="v-num"></span>
-      <h2 id="v-title"></h2>
-      <p class="v-meta" id="v-meta"></p>
-      <p class="v-status" id="v-status"></p>
-    </figcaption>
-  </figure>
+  <div class="v-stage">
+    <img id="v-img" alt="">
+    <button class="v-nav v-prev" type="button" aria-label="Предыдущая работа"><svg viewBox="0 0 24 48" aria-hidden="true"><path d="M20 4 4 24l16 20"/></svg></button>
+    <button class="v-nav v-next" type="button" aria-label="Следующая работа"><svg viewBox="0 0 24 48" aria-hidden="true"><path d="M4 4l16 20L4 44"/></svg></button>
+  </div>
+  <aside class="v-info">
+    <button class="v-close" type="button">Закрыть</button>
+    <p class="v-num" id="v-num"></p>
+    <h2 id="v-title"></h2>
+    <dl class="v-meta" id="v-meta"></dl>
+    <p class="v-pos" id="v-pos"></p>
+  </aside>
 </div>
 
 <script src="data/works.js"></script>

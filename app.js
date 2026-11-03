@@ -2,22 +2,22 @@
   var F = window.FILTERS, W = window.WORKS;
   var GROUPS = ["genre", "place", "season", "status"];
   var sel = { genre: [], place: [], season: [], status: [] };
-  var visible = [];
-  var current = -1;
+  var visible = [], current = -1;
 
   var $ = function (id) { return document.getElementById(id); };
   var pad = function (n) { return (n < 10 ? "0" : "") + n; };
+  var esc = function (s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;"); };
   var tagsOf = function (w, g) { return g === "status" ? [w.status] : (w[g] || []); };
-  var metaOf = function (w) {
-    var p = [];
-    if (w.tech) p.push(w.tech);
-    if (w.size) p.push(w.size + " см");
-    if (w.year) p.push(w.year + (/\d$/.test(w.year) ? " г." : ""));
-    return p.join(" · ");
-  };
+  var yearOf = function (w) { return w.year ? w.year + (/\d$/.test(w.year) ? " г." : "") : ""; };
   var statusText = function (w) {
     var t = F.status.items[w.status] || "";
     return w.museum ? t + ": " + w.museum : t;
+  };
+  var plural = function (n) {
+    var a = n % 10, b = n % 100;
+    if (a === 1 && b !== 11) return "работа";
+    if (a >= 2 && a <= 4 && (b < 12 || b > 14)) return "работы";
+    return "работ";
   };
 
   function matches(w, skip) {
@@ -28,7 +28,6 @@
     });
   }
 
-  // Filters
   function buildFilters() {
     var root = $("filter-groups");
     GROUPS.forEach(function (g) {
@@ -38,13 +37,13 @@
       if (!used.length) return;
       var row = document.createElement("div");
       row.className = "fgroup " + g;
-      row.innerHTML = '<span class="fgroup-label">' + F[g].label + '</span><div class="chips"></div>';
+      row.innerHTML = '<span class="fgroup-label">' + F[g].label + '</span><div class="chips" role="group" aria-label="' + F[g].label + '"></div>';
       var chips = row.querySelector(".chips");
       used.forEach(function (k) {
         var b = document.createElement("button");
         b.type = "button"; b.className = "chip"; b.dataset.g = g; b.dataset.k = k;
         b.setAttribute("aria-pressed", "false");
-        b.innerHTML = F[g].items[k] + '<span class="c"></span>';
+        b.innerHTML = (g === "status" ? '<span class="dot ' + k + '"></span>' : "") + F[g].items[k] + '<span class="c"></span>';
         b.addEventListener("click", function () {
           var a = sel[g], i = a.indexOf(k);
           if (i > -1) a.splice(i, 1); else a.push(k);
@@ -58,16 +57,14 @@
 
   function updateChips() {
     document.querySelectorAll(".chip").forEach(function (b) {
-      var g = b.dataset.g, k = b.dataset.k;
-      b.setAttribute("aria-pressed", sel[g].indexOf(k) > -1 ? "true" : "false");
+      var g = b.dataset.g, k = b.dataset.k, on = sel[g].indexOf(k) > -1;
       var n = W.filter(function (w) { return matches(w, g) && tagsOf(w, g).indexOf(k) > -1; }).length;
+      b.setAttribute("aria-pressed", on ? "true" : "false");
       b.querySelector(".c").textContent = n;
-      b.disabled = false;
-      b.style.opacity = n || sel[g].indexOf(k) > -1 ? "" : ".4";
+      b.classList.toggle("dim", !n && !on);
     });
   }
 
-  // Grid
   function render() {
     visible = W.filter(function (w) { return matches(w); });
     var grid = $("grid");
@@ -75,18 +72,20 @@
     visible.forEach(function (w, i) {
       var li = document.createElement("li");
       li.className = "card";
+      li.style.setProperty("--r", (w.w / w.h).toFixed(4));
       li.innerHTML =
-        '<button type="button">' +
-          '<div class="frame"><img loading="lazy" src="img/thumb/' + pad(w.n) + '.jpg" width="' + w.w + '" height="' + w.h + '" alt="' + w.title.replace(/"/g, "&quot;") + '"></div>' +
-          '<div class="cap"><span class="num">' + pad(w.n) + '</span><span class="t">' + w.title + '</span>' +
-          '<div class="m">' + metaOf(w) + '</div>' +
-          '<span class="badge ' + w.status + '">' + statusText(w) + '</span></div>' +
+        '<button type="button" aria-label="№ ' + w.n + ". " + esc(w.title) + '">' +
+          '<div class="ph"><img loading="lazy" decoding="async" src="img/thumb/' + pad(w.n) + '.jpg" width="' + w.w + '" height="' + w.h + '" alt=""></div>' +
+          '<div class="cap"><span class="num">' + w.n + '</span><div>' +
+            '<div class="t">' + w.title + '</div>' +
+            '<div class="st"><span class="dot ' + w.status + '"></span>' + statusText(w) + (w.year ? ", " + yearOf(w) : "") + '</div>' +
+          '</div></div>' +
         '</button>';
       li.querySelector("button").addEventListener("click", function () { open(i); });
       grid.appendChild(li);
     });
     var any = GROUPS.some(function (g) { return sel[g].length; });
-    $("count").textContent = any ? "Показано " + visible.length + " из " + W.length : "Всего работ: " + W.length;
+    $("count").textContent = any ? visible.length + " из " + W.length : W.length + " " + plural(W.length);
     $("reset").hidden = !any;
     $("empty").hidden = visible.length > 0;
     updateChips();
@@ -97,17 +96,22 @@
   $("reset2").addEventListener("click", reset);
 
   // Viewer
-  var viewer = $("viewer"), lastFocus = null;
+  var viewer = $("viewer"), img = $("v-img"), lastFocus = null;
+  function row(label, value, extra) { return value ? "<dt>" + label + "</dt><dd>" + (extra || "") + value + "</dd>" : ""; }
   function show(i) {
     current = (i + visible.length) % visible.length;
     var w = visible[current];
-    var img = $("v-img");
+    img.classList.remove("in"); void img.offsetWidth; img.classList.add("in");
     img.src = "img/full/" + pad(w.n) + ".jpg";
     img.alt = w.title;
     $("v-num").textContent = "№ " + w.n;
     $("v-title").textContent = w.title;
-    $("v-meta").textContent = metaOf(w);
-    $("v-status").innerHTML = '<span class="badge ' + w.status + '">' + statusText(w) + "</span>";
+    $("v-meta").innerHTML =
+      row("Техника", w.tech) +
+      row("Размер", w.size ? w.size + " см" : "") +
+      row("Год", yearOf(w)) +
+      row("Где сейчас", statusText(w), '<span class="dot ' + w.status + '"></span>');
+    $("v-pos").textContent = (current + 1) + " из " + visible.length;
     history.replaceState(null, "", "#" + w.n);
     var nx = visible[(current + 1) % visible.length];
     if (nx) { var pre = new Image(); pre.src = "img/full/" + pad(nx.n) + ".jpg"; }
@@ -128,7 +132,7 @@
   viewer.querySelector(".v-close").addEventListener("click", close);
   viewer.querySelector(".v-prev").addEventListener("click", function () { show(current - 1); });
   viewer.querySelector(".v-next").addEventListener("click", function () { show(current + 1); });
-  viewer.addEventListener("click", function (e) { if (e.target === viewer || e.target.classList.contains("v-img-wrap")) close(); });
+  viewer.querySelector(".v-stage").addEventListener("click", function (e) { if (e.target.classList.contains("v-stage")) close(); });
   document.addEventListener("keydown", function (e) {
     if (viewer.hidden) return;
     if (e.key === "Escape") close();
