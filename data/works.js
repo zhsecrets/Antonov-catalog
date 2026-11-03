@@ -91,5 +91,18 @@ window.WORKS = [
   { n: 47, title: "«Храм Св. Георгия. Старая Ладога»", tech: "Картон, масло", size: "49,5 × 73,5", year: "", genre: ["peyzazh"], place: ["ladoga", "hramy"], season: ["zima"], status: "studio", w: 720, h: 475 },
   { n: 48, title: "«Весна на Севере»", tech: "Картон, масло", size: "56 × 76", year: "", genre: ["peyzazh"], place: ["sever"], season: ["vesna"], status: "studio", w: 720, h: 558 },
   { n: 49, title: "«Дача Кардовского, Переславль-Залесский»", tech: "Картон, масло", size: "76 × 52", year: "", genre: ["peyzazh"], place: ["pereslavl"], season: ["zima"], status: "studio", w: 512, h: 720 },
-  { n: 50, title: "«Москва-Сортировочная (Угольный склад)»", tech: "Картон, масло", size: "49 × 71", year: "1954", genre: ["peyzazh"], place: ["moskva"], season: ["zima"], status: "studio", w: 720, h: 540 }
+  { n: 50, title: "«Москва-Сортировочная (Угольный склад)»", tech: "Картон, масло", size: "49 × 71", year: "1954", genre: ["peyzazh"], place: ["moskva"], season: ["zima"], status: "studio", w: 720, h: 540 },
+  { n: 51, title: "«Титово. Старая яблоня, ранний снег»", tech: "Картон, масло", size: "57,5 × 77,5", year: "", genre: ["peyzazh"], place: ["titovo"], season: ["osen"], status: "studio", w: 720, h: 562 },
+  { n: 52, title: "«Надвратная церковь Борисо-Глебской крепости»", tech: "Картон, масло", size: "80 × 56,5", year: "", genre: ["peyzazh"], place: ["hramy"], season: [], status: "studio", w: 540, h: 720 },
+  { n: 53, title: "«Лилии и пионы»", tech: "Бумага, акварель", size: "35 × 47", year: "1991", genre: ["natyurmort"], place: [], season: ["leto"], status: "studio", w: 720, h: 540 },
+  { n: 54, title: "«Сад (Антоновка)»", tech: "Картон, масло", size: "50 × 75,5", year: "1985", genre: ["peyzazh"], place: [], season: ["leto"], status: "studio", w: 720, h: 535 },
+  { n: 55, title: "«Яблоневый сад»", tech: "Картон, масло", size: "56 × 78", year: "1985", genre: ["peyzazh"], place: [], season: ["leto"], status: "studio", w: 720, h: 540 },
+  { n: 56, title: "«Семья. Утро. Соколиная гора» (эскиз)", tech: "Оргалит, смешанная техника", size: "85 × 62", year: "", genre: ["portret-semya", "kompoziciya"], place: [], season: [], status: "studio", w: 540, h: 720 },
+  { n: 57, title: "«Осень»", tech: "Картон, темпера", size: "42,5 × 66,3", year: "", genre: ["peyzazh"], place: [], season: ["osen"], status: "studio", w: 720, h: 540 },
+  { n: 58, title: "«Никитский м-рь. Переславль-Залесский»", tech: "Холст, масло", size: "80 × 120", year: "1976", genre: ["peyzazh"], place: ["pereslavl", "hramy"], season: ["osen"], status: "studio", w: 720, h: 540 },
+  { n: 59, title: "«Весна в Титово»", tech: "Картон, темпера", size: "50 × 78", year: "1990", genre: ["peyzazh"], place: ["titovo"], season: ["vesna"], status: "studio", w: 720, h: 540 },
+  { n: 60, title: "«Стога»", tech: "Бумага, акварель", size: "39 × 71,5", year: "", genre: ["peyzazh"], place: [], season: ["leto"], status: "studio", w: 720, h: 480 },
+  { n: 61, title: "«В ночь с 1 на 2 января 1976–1977 г.»", tech: "Оргалит, темпера", size: "76 × 110", year: "", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 720, h: 540 },
+  { n: 62, title: "«Ночь»", tech: "Оргалит, темпера", size: "121 × 61", year: "", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 360, h: 720 },
+  { n: 63, title: "Эскиз. «Двое»", tech: "Оргалит, темпера", size: "", year: "", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 720, h: 540 }
 ];
