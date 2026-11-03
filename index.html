@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Евгений Иванович Антонов (1930–1998). Каталог работ</title>
+<meta name="description" content="Онлайн-каталог работ художника Евгения Ивановича Антонова (1930–1998): пейзажи, натюрморты, портреты.">
+<meta property="og:title" content="Евгений Иванович Антонов (1930–1998)">
+<meta property="og:description" content="Онлайн-каталог работ художника">
+<meta property="og:image" content="img/full/09.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <p class="eyebrow">Каталог работ</p>
+  <h1><span class="surname">Антонов</span><span class="given">Евгений Иванович</span></h1>
+  <p class="years">1930 – 1998</p>
+  <nav class="links">
+    <a href="catalog/antonov-katalog.pdf" download>Скачать каталог (PDF)</a>
+  </nav>
+</header>
+
+<section class="filters" aria-label="Фильтры">
+  <div id="filter-groups"></div>
+  <div class="filter-foot">
+    <span id="count" aria-live="polite"></span>
+    <button id="reset" type="button" hidden>Сбросить фильтры</button>
+  </div>
+</section>
+
+<main>
+  <ul id="grid" class="grid"></ul>
+  <p id="empty" class="empty" hidden>Под эти фильтры работ нет. <button type="button" class="linklike" id="reset2">Сбросить</button></p>
+</main>
+
+<footer class="foot">
+  <p>Евгений Иванович Антонов · 1930–1998</p>
+</footer>
+
+<div id="viewer" class="viewer" hidden role="dialog" aria-modal="true" aria-labelledby="v-title">
+  <button class="v-close" type="button" aria-label="Закрыть">×</button>
+  <button class="v-nav v-prev" type="button" aria-label="Предыдущая работа">‹</button>
+  <button class="v-nav v-next" type="button" aria-label="Следующая работа">›</button>
+  <figure class="v-fig">
+    <div class="v-img-wrap"><img id="v-img" alt=""></div>
+    <figcaption>
+      <span class="v-num" id="v-num"></span>
+      <h2 id="v-title"></h2>
+      <p class="v-meta" id="v-meta"></p>
+      <p class="v-status" id="v-status"></p>
+    </figcaption>
+  </figure>
+</div>
+
+<script src="data/works.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
