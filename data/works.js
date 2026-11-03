@@ -87,5 +87,6 @@ window.WORKS = [
   { n: 43, title: "«Закат. Титово»", tech: "Картон, масло", size: "43,5 × 75", year: "", genre: ["peyzazh"], place: ["titovo"], season: [], status: "studio", w: 720, h: 465 },
   { n: 44, title: "«Дачная улица»", tech: "Картон, масло", size: "57 × 79,5", year: "", genre: ["peyzazh"], place: [], season: ["osen"], status: "studio", w: 720, h: 540 },
   { n: 45, title: "«Пионы»", tech: "Картон, масло", size: "51 × 59", year: "", genre: ["natyurmort"], place: [], season: ["leto"], status: "studio", w: 720, h: 720 },
+  { n: 47, title: "«Храм Св. Георгия. Старая Ладога»", tech: "Картон, масло", size: "49,5 × 73,5", year: "", genre: ["peyzazh"], place: ["ladoga", "hramy"], season: ["zima"], status: "studio", w: 720, h: 475 },
   { n: 49, title: "«Дача Кардовского, Переславль-Залесский»", tech: "Картон, масло", size: "76 × 52", year: "", genre: ["peyzazh"], place: ["pereslavl"], season: ["zima"], status: "studio", w: 512, h: 720 }
 ];
