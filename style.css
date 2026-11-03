@@ -57,6 +57,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 18px 16px 40px; }
 .badge { display: inline-block; margin-top: 8px; font-size: 11px; letter-spacing: .04em; padding: 2px 8px; border-radius: 3px; background: #ece4d8; color: #6b5641; }
 .badge.family { background: #e3e9df; color: #4c5f45; }
 .badge.private { background: #e6e3ec; color: #575069; }
+.badge.studio { background: #f0e6d6; color: #7a5a3a; }
 .empty { text-align: center; color: var(--mute); padding: 40px 0; }
 
 .foot { text-align: center; color: var(--mute); font-size: 13px; padding: 32px 16px 48px; border-top: 1px solid var(--rule); max-width: 1240px; margin: 0 auto; }

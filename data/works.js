@@ -5,7 +5,7 @@
 // genre:  peyzazh | natyurmort | portret | portret-semya | nyu | kompoziciya
 // place:  pereslavl | titovo | nara | moskva | sever | hramy
 // season: vesna | leto | osen | zima
-// status: museum | family | private        museum: название музея (необязательно)
+// status: museum | family | private | studio        museum: название музея (необязательно)
 
 window.FILTERS = {
   genre: {
@@ -26,6 +26,7 @@ window.FILTERS = {
       "titovo": "Титово",
       "nara": "Нара и Спас-Темня",
       "moskva": "Москва",
+      "ladoga": "Старая Ладога и Волхов",
       "sever": "Север",
       "hramy": "Храмы и монастыри"
     }
@@ -36,13 +37,13 @@ window.FILTERS = {
   },
   status: {
     label: "Где сейчас",
-    items: { "museum": "В музее", "family": "В семье", "private": "В частной коллекции" }
+    items: { "museum": "В музее", "family": "В семье", "private": "В частной коллекции", "studio": "В мастерской" }
   }
 };
 
 window.WORKS = [
   { n: 1,  title: "«Церковь у реки Нара»", tech: "Картон, темпера", size: "55 × 76,5", year: "", genre: ["peyzazh"], place: ["nara", "hramy"], season: ["osen"], status: "museum", w: 540, h: 720 },
-  { n: 2,  title: "«Весна на Волхове. ст. Ладога»", tech: "Картон, смешанная техника", size: "57 × 76,8", year: "март 1974", genre: ["peyzazh"], place: ["hramy"], season: ["vesna"], status: "museum", w: 720, h: 540 },
+  { n: 2,  title: "«Весна на Волхове. ст. Ладога»", tech: "Картон, смешанная техника", size: "57 × 76,8", year: "март 1974", genre: ["peyzazh"], place: ["ladoga", "hramy"], season: ["vesna"], status: "museum", w: 720, h: 540 },
   { n: 3,  title: "«Висеницы»", tech: "Картон, темпера", size: "57,5 × 77,3", year: "1975", genre: ["peyzazh"], place: [], season: ["osen"], status: "museum", w: 720, h: 540 },
   { n: 4,  title: "«У р. Нара»", tech: "Бумага, акварель", size: "57 × 75", year: "20 октября 1974", genre: ["peyzazh"], place: ["nara"], season: ["osen"], status: "museum", w: 720, h: 540 },
   { n: 5,  title: "«Маки д. Титово»", tech: "", size: "51,5 × 62", year: "1995", genre: ["natyurmort"], place: ["titovo"], season: ["leto"], status: "museum", w: 720, h: 600 },
@@ -67,5 +68,24 @@ window.WORKS = [
   { n: 24, title: "«Север»", tech: "Картон, масло", size: "40 × 50", year: "1976", genre: ["peyzazh"], place: ["sever"], season: ["zima"], status: "museum", w: 720, h: 554 },
   { n: 25, title: "«Барский пруд в Титово»", tech: "Картон, масло", size: "42 × 50", year: "", genre: ["peyzazh"], place: ["titovo"], season: ["leto"], status: "museum", w: 720, h: 616 },
   { n: 26, title: "«Портрет фронтовика»", tech: "Картон, масло", size: "53 × 37,5", year: "", genre: ["portret"], place: [], season: [], status: "museum", w: 540, h: 720 },
-  { n: 27, title: "«Вид на сад из окна мастерской»", tech: "Картон, масло", size: "28 × 43", year: "", genre: ["peyzazh"], place: [], season: ["leto"], status: "museum", w: 720, h: 465 }
+  { n: 27, title: "«Вид на сад из окна мастерской»", tech: "Картон, масло", size: "28 × 43", year: "", genre: ["peyzazh"], place: [], season: ["leto"], status: "museum", w: 720, h: 465 },
+  { n: 28, title: "«Весенний сад»", tech: "Акварель", size: "53,5 × 73,5", year: "", genre: ["peyzazh"], place: [], season: ["vesna"], status: "studio", w: 720, h: 590 },
+  { n: 29, title: "«Ветер и холодно. Староладожская крепость»", tech: "Холст, масло", size: "60 × 80", year: "", genre: ["peyzazh"], place: ["ladoga", "hramy"], season: ["zima"], status: "studio", w: 720, h: 555 },
+  { n: 30, title: "«Переславль-Залесский»", tech: "Бумага, акварель", size: "60 × 85", year: "", genre: ["peyzazh"], place: ["pereslavl", "hramy"], season: ["osen"], status: "studio", w: 720, h: 518 },
+  { n: 31, title: "«Золотой сад»", tech: "Холст, масло", size: "79 × 59", year: "", genre: ["peyzazh"], place: [], season: ["osen"], status: "studio", w: 642, h: 720 },
+  { n: 32, title: "«Золотой сад (2)»", tech: "Картон, масло", size: "77 × 68", year: "", genre: ["peyzazh"], place: [], season: ["osen"], status: "studio", w: 655, h: 720 },
+  { n: 33, title: "«Натюрморт с виноградом и георгинами. Анапа»", tech: "Акварель", size: "", year: "", genre: ["natyurmort"], place: [], season: ["leto"], status: "studio", w: 541, h: 720 },
+  { n: 34, title: "«Деревня в Кижах»", tech: "Бумага, акварель", size: "74 × 64", year: "1974", genre: ["peyzazh"], place: ["sever"], season: ["leto"], status: "studio", w: 720, h: 591 },
+  { n: 35, title: "«Отдых в поле»", tech: "Картон, масло", size: "55,5 × 79,3", year: "", genre: ["kompoziciya"], place: [], season: [], status: "studio", w: 720, h: 538 },
+  { n: 36, title: "«Просторы. Титово»", tech: "Бумага, акварель", size: "54 × 73", year: "", genre: ["peyzazh"], place: ["titovo"], season: ["leto"], status: "studio", w: 720, h: 591 },
+  { n: 37, title: "«Кижи»", tech: "Бумага, акварель", size: "53 × 73", year: "", genre: ["peyzazh"], place: ["sever"], season: ["leto"], status: "studio", w: 720, h: 600 },
+  { n: 38, title: "«Сирень»", tech: "Холст, масло", size: "85 × 94,5", year: "", genre: ["natyurmort"], place: [], season: ["vesna"], status: "studio", w: 720, h: 720 },
+  { n: 39, title: "«Переславль-Залесский»", tech: "Холст, масло", size: "80 × 100", year: "", genre: ["peyzazh"], place: ["pereslavl", "hramy"], season: ["osen"], status: "studio", w: 720, h: 540 },
+  { n: 40, title: "«Мыслитель» (Иван Егорович Антонов)", tech: "Холст, масло", size: "78 × 63,5", year: "", genre: ["portret-semya"], place: [], season: [], status: "studio", w: 540, h: 720 },
+  { n: 41, title: "«Староладожская крепость»", tech: "Картон, масло", size: "65,5 × 78", year: "", genre: ["peyzazh"], place: ["ladoga", "hramy"], season: [], status: "studio", w: 701, h: 720 },
+  { n: 42, title: "«Картошка»", tech: "Картон, масло", size: "57,3 × 80", year: "1984", genre: ["natyurmort"], place: [], season: [], status: "studio", w: 540, h: 720 },
+  { n: 43, title: "«Закат. Титово»", tech: "Картон, масло", size: "43,5 × 75", year: "", genre: ["peyzazh"], place: ["titovo"], season: [], status: "studio", w: 720, h: 465 },
+  { n: 44, title: "«Дачная улица»", tech: "Картон, масло", size: "57 × 79,5", year: "", genre: ["peyzazh"], place: [], season: ["osen"], status: "studio", w: 720, h: 540 },
+  { n: 45, title: "«Пионы»", tech: "Картон, масло", size: "51 × 59", year: "", genre: ["natyurmort"], place: [], season: ["leto"], status: "studio", w: 720, h: 720 },
+  { n: 49, title: "«Дача Кардовского, Переславль-Залесский»", tech: "Картон, масло", size: "76 × 52", year: "", genre: ["peyzazh"], place: ["pereslavl"], season: ["zima"], status: "studio", w: 512, h: 720 }
 ];
